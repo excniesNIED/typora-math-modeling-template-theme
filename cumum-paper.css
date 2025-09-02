@@ -1,4 +1,4 @@
-/* shumo-paper.css - A Typora theme for Mathematical Contest in Modeling Papers */
+/* cumcm-paper-updated.css - A Typora theme for CUMCM Papers (v2) */
 
 /* --- 全局与基础设置 --- */
 :root {
@@ -34,7 +34,7 @@ h1 {
     margin-bottom: 1.5em; /* 和摘要之间空1.5行 */
 }
 
-/* 一级标题: (默认字体), 四号, 居中 */
+/* 一级标题: 四号, 居中 */
 h2 {
     font-family: var(--header-font-family);
     font-size: var(--header-font-size);
@@ -44,7 +44,7 @@ h2 {
     margin-bottom: 1em;
 }
 
-/* 二级标题: (默认字体), 小四, 左对齐 */
+/* 二级标题: 小四, 左对齐 */
 h3 {
     font-family: var(--header-font-family);
     font-size: var(--main-font-size);
@@ -69,7 +69,7 @@ p {
     text-align: justify; /* 两端对齐 */
 }
 
-/* 取消标题后面紧跟的段落的首行缩进 (符合习惯) */
+/* 标题后面紧跟的段落的首行缩进 */
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     text-indent: 2em;
 }
@@ -122,32 +122,37 @@ td {
     text-align: center;
 }
 
-/* --- 图片格式 --- */
-/* 图片容器 */
+/* --- [修正] 图片格式 --- */
 .md-image {
     display: block;
-    margin: 1.5em auto;
     text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em; /* 图片和标题之间的间距 */
 }
-
-/* 图片本身 */
 .md-image > img {
-    margin: auto;
-    max-width: 80%; /* 防止图片过大 */
+     display: inline-block;
+     max-width: 100%; /* 防止图片过宽溢出 */
 }
-
-/* 图片标题 (约定：图片下方紧跟着的段落为标题) */
+/* 图片标题 */
 .md-image + p {
-    text-indent: 0em; /* 标题不缩进 */
-    text-align: center;
-    margin-top: -0.5em; /* 与图片间距0.5行 */
-    font-size: calc(var(--main-font-size) - 1pt); /* 比正文小一点 */
+     display: block;
+     text-align: center;
+     text-indent: 0; /* 标题不缩进 */
+     margin-top: 0;
+     margin-bottom: 1.5em; /* 标题下方的间距 */
+     font-size: calc(var(--main-font-size) - 1pt);
 }
 
-/* --- 其他 --- */
-/* 关键词加粗显示 */
-strong, b {
-    font-family: var(--header-font-family); /* 关键词用黑体 */
+
+/* --- [新增] 特殊字体格式修正 --- */
+/* 修正：使等宽字体使用正文字体 */
+code, pre, tt {
+    font-family: var(--main-font-family) !important;
+}
+
+/* 修正：取消斜体样式 */
+em, i {
+    font-style: normal;
 }
 
 /* 列表不首行缩进 */
@@ -157,3 +162,5 @@ ul, ol {
 li > p {
     text-indent: 0;
 }
+
+/* 修正：移除了全局加粗更改字体的规则，现在加粗会保持原有字体 */
