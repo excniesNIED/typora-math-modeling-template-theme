@@ -1,0 +1,155 @@
+/*
+ * mcm-paper.css
+ * A Typora theme for the Mathematical Contest in Modeling (MCM/ICM).
+ * Author: Gemini
+ * Version: 1.0
+ */
+
+/* --- 全局与基础设置 (Global & Base Settings) --- */
+:root {
+    --main-font-family: "Times New Roman", serif;
+    --abstract-font-family: "Arial", sans-serif;
+    --main-font-size: 12pt;
+    --text-color: #000000;
+}
+
+body {
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    color: var(--text-color);
+    line-height: 1.5; /* 行距: 1.5倍 (Line Spacing: 1.5) */
+}
+
+/* 设置写作区域宽度和边距，模拟A4页面感 */
+#write {
+    max-width: 900px; /* Provides a comfortable reading width */
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+}
+
+/* --- 标题格式 (Headings) --- */
+
+/* 摘要标题 "Abstract": Arial, 小三 (15pt), 加粗 */
+/* 约定: 使用一级标题 H1 来写 "Abstract" */
+h1 {
+    font-family: var(--abstract-font-family);
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+/* 一级标题: Times New Roman, 小二 (18pt), 加粗 */
+/* 约定: 使用二级标题 H2 来写一级标题, 例如 "1. Introduction" */
+h2 {
+    font-family: var(--main-font-family);
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* 二级标题: Times New Roman, 三号 (16pt), 加粗 */
+/* 约定: 使用三级标题 H3 来写二级标题, 例如 "1.1 Assumptions" */
+h3 {
+    font-family: var(--main-font-family);
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+/* 三级标题: Times New Roman, 四号 (14pt), 加粗 */
+/* 约定: 使用四级标题 H4 来写三级标题, 例如 "1.1.1 Variable Definitions" */
+h4 {
+    font-family: var(--main-font-family);
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* 关键词 "Key words": Arial, 四号 (14pt), 加粗 */
+/* 约定: 使用五级标题 H5 来写 "Key words" */
+h5 {
+    font-family: var(--abstract-font-family);
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* 更低级别的标题保持一致风格 */
+h6 {
+    font-family: var(--main-font-family);
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* --- 正文与段落 (Body Text & Paragraphs) --- */
+p {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    text-align: justify; /* 两端对齐 */
+}
+
+/* 标题后的第一个段落不首行缩进 (符合英文习惯) */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    text-indent: 0;
+}
+
+/* --- 补充样式 (Bonus Styles for Academic Papers) --- */
+
+/* 公式: 居中显示 */
+.md-fences .md-math-block {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* 图片: 居中显示 */
+.md-image {
+    text-align: center;
+    margin: 1.5em auto;
+}
+/* 图片标题 */
+.md-image + p {
+    text-align: center;
+    margin-top: -0.5em;
+    font-size: calc(var(--main-font-size) - 1pt);
+}
+
+/* 表格: 采用学术论文常见的三线表样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em auto;
+    border-top: 1.5pt solid black;
+    border-bottom: 1.5pt solid black;
+}
+thead, th {
+    border: none;
+    border-bottom: 1.5pt solid black;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #555555;
+}
