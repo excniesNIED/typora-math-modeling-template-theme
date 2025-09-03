@@ -59,15 +59,17 @@
 
 打开命令行终端，进入文件所在目录，执行：
 ```bash
-pandoc your-paper.md -o final-mcm.docx --reference-doc=reference-mcm.docx
+pandoc your-paper.md -o final-mcm.docx --reference-doc=mcmicm_template.docx
 ```
 
 #### 导出国赛 (CUMCM) 格式 🇨🇳
 
 打开命令行终端，进入文件所在目录，执行：
 ```bash
-pandoc your-paper.md -o final-cumcm.docx --reference-doc=reference-cumcm.docx
+pandoc your-paper.md -o final-cumcm.docx --reference-doc=cumcm_template.docx
 ```
+
+Typora 导出方法请查看  [Typora_Pandoc_Config.md](Typora_Pandoc_Config.md) 
 
 ### 第 5 步：最终手动调整
 
