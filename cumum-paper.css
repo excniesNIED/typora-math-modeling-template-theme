@@ -54,8 +54,16 @@ h3 {
     margin-bottom: 0.5em;
 }
 
+h4 {
+    font-weight: bold;
+    font-size: var(--main-font-size);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
 /* 三、四、五、六级别标题 */
-h4, h5, h6 {
+h5, h6 {
     font-family: var(--header-font-family);
     font-weight: bold;
     text-align: left;
