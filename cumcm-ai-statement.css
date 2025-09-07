@@ -1,0 +1,277 @@
+/* cumcm-ai-statement.css - A Typora theme for CUMCM AI Tool Usage Statement based on vlook-solaris */
+
+/* --- 全局与基础设置 --- */
+:root {
+    --main-font-size: 12pt; /* 正文: 小四 */
+    --header-font-size: 14pt; /* 一级标题/论文题目: 四号 */
+    --text-color: #000000; /* 黑色字体 */
+    --background-color: #ffffff; /* 白色背景 */
+    --main-font-family: "Times New Roman", "SimSun", "Songti SC", serif; /* 西文/数字在前，中文宋体在后 */
+    --header-font-family: "SimHei", "Heiti SC", sans-serif; /* 标题用黑体 */
+}
+
+/* 全局背景设置 */
+html {
+    background-color: var(--background-color);
+}
+
+body {
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.25; /* 多倍行距 1.25 */
+}
+
+/* 写作区域背景和宽度 */
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 40px 100px 40px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* 确保所有容器都是白色背景 */
+.typora-export,
+.typora-export-content,
+.md-rawblock-container,
+.md-htmlblock-container {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* --- 标题格式 --- */
+/* 论文题目: 黑体, 四号, 居中 */
+h1 {
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em; /* 和摘要之间空1.5行 */
+}
+
+/* 一级标题: 四号, 居中 */
+h2 {
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* 二级标题: 小四, 左对齐 */
+h3 {
+    font-family: var(--header-font-family);
+    font-size: var(--main-font-size);
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: var(--main-font-size);
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+/* 三、四、五、六级别标题 */
+h5, h6 {
+    font-family: var(--header-font-family);
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: left;
+}
+
+/* --- 正文段落格式 --- */
+p {
+    text-indent: 2em; /* 每段开头空两个中文字符 */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    text-align: justify; /* 两端对齐 */
+    color: var(--text-color);
+}
+
+/* 标题后面紧跟的段落的首行缩进 */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    text-indent: 2em;
+}
+
+/* --- 公式格式 --- */
+/* 行内公式 */
+.md-math-inline .md-math {
+    font-size: 1.05em; /* 稍微放大一点，更清晰 */
+    color: var(--text-color);
+}
+
+/* 独立成行的公式块居中 */
+.md-fences .md-math-block {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+/* 数学公式背景 */
+.md-math-block, .md-math-inline {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* --- 表格格式 (三线表) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em auto; /* 上下边距 */
+    border-top: 1.5pt solid black;
+    border-bottom: 1.5pt solid black;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* 表格标题 (约定：在表格前的段落作为标题) */
+p + table {
+    margin-top: 0.5em;
+}
+table + p {
+    margin-top: 0;
+    text-indent: 0;
+    text-align: left;
+}
+
+thead, th {
+    border: none;
+    border-bottom: 1.5pt solid black;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- 图片格式 --- */
+.md-image {
+    display: block;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em; /* 图片和标题之间的间距 */
+}
+.md-image > img {
+     display: inline-block;
+     max-width: 100%; /* 防止图片过宽溢出 */
+}
+/* 图片标题 */
+.md-image + p {
+     display: block;
+     text-align: center;
+     text-indent: 0; /* 标题不缩进 */
+     margin-top: 0;
+     margin-bottom: 1.5em; /* 标题下方的间距 */
+     font-size: calc(var(--main-font-size) - 1pt);
+     color: var(--text-color);
+}
+
+/* --- 代码块格式 --- */
+pre, code {
+    font-family: var(--main-font-family) !important;
+    background-color: #f8f8f8;
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+}
+
+.md-fences {
+    background-color: #f8f8f8 !important;
+    color: var(--text-color) !important;
+    border: 1px solid #e0e0e0;
+}
+
+/* --- 特殊字体格式修正 --- */
+/* 修正：使等宽字体使用正文字体 */
+code, pre, tt {
+    font-family: var(--main-font-family) !important;
+    background-color: #f8f8f8;
+    color: var(--text-color);
+}
+
+/* 修正：取消斜体样式 */
+em, i {
+    font-style: normal;
+    color: var(--text-color);
+}
+
+/* 列表格式 */
+ul, ol {
+    padding-left: 2em;
+    color: var(--text-color);
+}
+li > p {
+    text-indent: 0;
+    color: var(--text-color);
+}
+
+/* 引用块格式 */
+blockquote {
+    border-left: 4px solid #ddd;
+    margin: 1em 0;
+    padding-left: 1em;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* 链接格式 */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* 强调文本 */
+strong, b {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* 分割线 */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2em 0;
+}
+
+/* 确保选中文本的颜色 */
+::selection {
+    background-color: #b3d4fc;
+    color: var(--text-color);
+}
+
+/* Typora 特定元素背景覆盖 */
+.CodeMirror-wrap,
+.CodeMirror,
+.cm-s-typora-default,
+.typora-sourceview-on,
+#typora-source {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}

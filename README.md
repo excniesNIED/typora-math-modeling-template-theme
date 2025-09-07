@@ -26,6 +26,7 @@
 * **主题文件 (Themes):**
     * `cumcm-paper.css`: **国赛 (CUMCM)** 专用 Typora 主题。
     * `mcm-paper.css`: **美赛 (MCM/ICM)** 专用 Typora 主题。
+    * `cumcm-ai-statement.css`: **国赛 AI 工具使用详情说明文档专用主题**，基于 vlook-solaris 修改的白色背景版本。
 * **参考模板 (Reference Docs):**
     * `reference-cumcm.docx`: **国赛** Word 导出样式模板。
     * `reference-mcm.docx`: **美赛** Word 导出样式模板。
@@ -43,9 +44,12 @@
 ### 第 2 步：配置 Typora 主题
 
 1.  打开 Typora，进入 **文件 -> 偏好设置 -> 外观 -> 打开主题文件夹**。
-2.  将本仓库中的 `cumcm-paper.css` 和 `mcm-paper.css` **两个文件**都复制进去。
+2.  将本仓库中的 `cumcm-paper.css`、`mcm-paper.css` 和 `cumcm-ai-statement.css` **三个文件**都复制进去。
 3.  **完全关闭并重启 Typora**。
-4.  重启后，从菜单栏的 **主题** 中根据你的需要选择 `CUMCM Paper` 或 `MCM Paper`。
+4.  重启后，从菜单栏的 **主题** 中根据你的需要选择：
+    - `CUMCM Paper`: 国赛论文写作
+    - `MCM Paper`: 美赛论文写作  
+    - `CUMCM AI Statement`: 国赛 AI 工具使用详情说明文档专用
 
 ### 第 3 步：撰写论文
 
@@ -77,6 +81,33 @@ Typora 导出方法请查看  [Typora_Pandoc_Config.md](Typora_Pandoc_Config.md)
 
 * **国赛**: 按要求添加承诺书、编号页，并从摘要页开始设置页码。
 * **美赛**: 添加官方要求的 Summary Sheet 和目录，并根据要求设置页码。
+
+---
+
+## 🎨 CUMCM AI Statement 主题说明
+
+### 主题特性
+`cumcm-ai-statement.css` 是专为 **国赛参赛队编写 AI 工具使用详情说明文档** 而设计的主题，基于知名的 **vlook-solaris** 主题进行修改，具有以下特点：
+
+- **🤖 专用场景**: 专门针对国赛 (CUMCM) 参赛队在竞赛期间编写 AI 工具使用详情说明文档
+- **🔍 基于 vlook-solaris**: 继承了 vlook 主题的优秀设计理念和布局结构
+- **⚪ 纯白背景**: 移除了原主题的深色背景，改为经典的白色背景，便于打印和提交
+- **⚫ 黑色字体**: 采用标准黑色字体，确保最佳的阅读体验和文档清晰度
+- **📝 学术字体**: 参考 `cumum-paper.css` 的字体配置，使用 Times New Roman + 中文宋体的学术写作标准组合
+- **📄 文档规范**: 符合竞赛组委会对说明文档的格式要求，简洁清晰
+
+### 字体配置
+- **西文/数字**: Times New Roman (学术标准)
+- **中文正文**: 宋体 (SimSun/Songti SC)
+- **标题**: 黑体 (SimHei/Heiti SC)
+- **字号**: 小四 (12pt) 正文，四号 (14pt) 标题
+
+### 与其他主题的区别
+| 主题 | 背景色 | 字体颜色 | 设计风格 | 适用场景 |
+|------|--------|----------|----------|----------|
+| `cumcm-paper.css` | 白色 | 黑色 | 国赛标准格式 | CUMCM 竞赛论文 |
+| `mcm-paper.css` | 白色 | 黑色 | 美赛标准格式 | MCM/ICM 竞赛论文 |
+| `cumcm-ai-statement.css` | 白色 | 黑色 | vlook 风格 + 学术字体 | 国赛 AI 工具使用说明文档 |
 
 ---
 
